@@ -1,3 +1,4 @@
+import '../styles/App.css'
 import React, { useState } from "react";
 
 const FunTranslations = () => {
@@ -14,24 +15,27 @@ const FunTranslations = () => {
   const translateText = async () => {
     try {
       const response = await fetch(
-        `https://api.funtranslations.com/translate/${language}.json?text=${encodeURIComponent(inputText)}`
+        `https://api.funtranslations.com/translate/${language}.json?text=${encodeURIComponent(
+          inputText
+        )}`
       );
       const data = await response.json();
-      setTranslatedText(data.contents.translated || "Error en la traducción.");
+      setTranslatedText(data.contents.translated || "Translation error.");
     } catch (error) {
-      setTranslatedText("Error en la traducción.");
+      setTranslatedText("Translation error.");
     }
   };
 
   return (
     <div className="card text-center m-3">
-      <div className="card-header">Traducciones Divertidas</div>
+      <div className="card-header">Fun Translations</div>
       <div className="card-body">
         <textarea
           className="form-control mb-3"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
-          placeholder="Escribe algo para traducir..."
+          placeholder="
+Write something to translate..."
         />
         <select
           className="form-select mb-3"
@@ -45,11 +49,9 @@ const FunTranslations = () => {
           ))}
         </select>
         <button className="btn btn-warning mb-3" onClick={translateText}>
-          Traducir
+          <i className="bi bi-translate"></i> Translate
         </button>
-        <p className="card-text">
-          <strong>Idioma:</strong> {languages.find((lang) => lang.value === language)?.label}
-        </p>
+        <p className="card-text"></p>
         <p className="card-text">{translatedText}</p>
       </div>
     </div>
