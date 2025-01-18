@@ -1,0 +1,46 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.tittle{
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #f6f6f6;
+  text-shadow: 10px 10px 10px rgba(151, 4, 156, 0.8);
+  letter-spacing: 10px; 
+  font-size: 8rem;
+  text-align: center;
+}
+
+.fondo-pantalla {
+  position: relative;
+  color: white;
+  height: 100px;
+}
+
+.bg-info {
+  background-color: #add8e6 !important;
+  height: 800px;
+  width: 100%;
+}
+
+.bg-light {
+  border-radius: 10px;
+  background-color: #c7f5c4 !important;
+  height: 100%;
+  width: 100%;
+}
+
+.card-header{
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #000000;
+  text-shadow: 3px 3px 5px rgba(98, 254, 8, 0.8);
+  font-size: 2rem;
+  text-align: center;
+}
